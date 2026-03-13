@@ -68,7 +68,9 @@ Cardiovascular-Disease-Prediction/
 ├── model_comparison_metrics.csv
 ├── rf_feature_importance.csv
 ├── gb_feature_importance.csv
+├── feature_importance.csv
 ├── model_predictions.csv
+├── model_predictions_long.csv
 │
 ├── README.md
 └── LICENSE
