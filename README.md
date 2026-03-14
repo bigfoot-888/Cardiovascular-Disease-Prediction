@@ -1,5 +1,13 @@
 # Cardiovascular Disease Prediction using Machine Learning
 
+## Project Summary
+
+This project explores the use of machine learning models to predict the likelihood of cardiovascular disease based on patient health data. Logistic Regression, Random Forest, and Gradient Boosting models were trained and evaluated using multiple performance metrics, including Accuracy, Precision, Recall, F1 Score, and ROC-AUC. These three models were chosen because they fit the type of data (binary) and to compare a linear baseline against more complex ensemble methods. 
+
+To better understand and communicate the results beyond Python charts, the model outputs were visualized through interactive dashboards built in Tableau. These dashboards provide insights into model performance, feature importance, and prediction behavior, allowing users to compare models and explore how predictions are distributed across different probability ranges.
+
+The project demonstrates an end-to-end machine learning workflow, including data preprocessing, model training, feature engineering, performance evaluation, and interactive data visualization. 
+
 ## Overview
 
 This project applies machine learning techniques to predict the presence of a cardiovascular disease in a patient. 
