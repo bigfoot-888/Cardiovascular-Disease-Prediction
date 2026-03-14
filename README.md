@@ -6,13 +6,11 @@ This project explores the use of machine learning models to predict the likeliho
 
 To better understand and communicate the results beyond Python charts, the model outputs were visualized through interactive dashboards built in Tableau. These dashboards provide insights into model performance, feature importance, and prediction behavior, allowing users to compare models and explore how predictions are distributed across different probability ranges.
 
-The project demonstrates an end-to-end machine learning workflow, including data preprocessing, model training, feature engineering, performance evaluation, and interactive data visualization. 
+As a whole, this repository covers an end-to-end machine learning workflow, including data preprocessing, model training, feature engineering, performance evaluation, and interactive data visualization. 
 
 ## Overview
 
-This project applies machine learning techniques to predict the presence of a cardiovascular disease in a patient. 
-
-The project includes:
+The goal of this analysis is to identify patterns in patient data that signal cardiovascular risk. The workflow includes:
 
 * Data exploration and preprocessing
 * Baseline model training
@@ -37,7 +35,7 @@ The objective of this project is to evaluate how different machine learning mode
 
 ## Dataset
 
-This project uses the **Cardiovascular Disease Dataset** available on Kaggle.
+The dataset used for the project, **Cardiovascular Disease Dataset**, is available on Kaggle.
 
 Due to licensing restrictions, the dataset is **not included in this repository**. Instead, it must be downloaded directly from Kaggle.
 
