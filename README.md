@@ -64,16 +64,45 @@ To use this command, you must configure your Kaggle API credentials by setting t
 ```
 Cardiovascular-Disease-Prediction/
 │
-├── Cardiovascular_Disease_Prediction.ipynb
-├── model_comparison_metrics.csv
-├── rf_feature_importance.csv
-├── gb_feature_importance.csv
-├── feature_importance.csv
-├── model_predictions.csv
-├── model_predictions_long.csv
+├── notebooks/
+│   └── Cardiovascular_Disease_Prediction.ipynb
+│
+├── tableau/
+│   └── cardiovascular_disease_prediction.twbx
+│
+├── data/
+│   ├── model_comparison_metrics.csv
+│   ├── feature_importance.csv
+│   ├── rf_feature_importance.csv
+│   ├── gb_feature_importance.csv
+│   ├── model_predictions_long.csv
+│   └── model_predictions.csv
+│
+├── images/
+│   ├── model_performance_dashboard.png
+│   ├── model_explainability_dashboard.png
+│   └── prediction_analysis_dashboard.png
+│
 │
 ├── README.md
 └── LICENSE
+
+cardiovascular-disease-ml/
+│
+├── images/
+│   ├── model_performance_dashboard.png
+│   ├── model_explainability_dashboard.png
+│   └── prediction_analysis_dashboard.png
+│
+├── notebooks/
+│   └── cardiovascular_ml.ipynb
+│
+├── data/
+│   ├── model_comparison_metrics.csv
+│   ├── feature_importance.csv
+│   └── model_predictions.csv
+│
+└── README.md
 ```
 
 ---
@@ -193,18 +222,32 @@ These outputs can be used for further analysis or visualization.
 
 ---
 
-## Visualization (Tableau)
+## Tableau Dashboards
 
-Data exports from this project can be used to build visual dashboards.
+### Model Performance
+Comparison of Logistic Regression, Random Forest, and Gradient Boosting across key evaluation metrics including Accuracy, Precision, Recall, F1 Score, and ROC-AUC.
 
-Potential visualizations include:
+![Model Performance](images/model_performance_dashboard.png)
 
-* Model performance comparison
-* Feature importance rankings
-* Prediction probability distributions
-* Error analysis of model predictions
+[View Interactive Dashboard on Tableau Public](https://public.tableau.com/views/cardiovascular_disease_prediction_model_performance/CardiovascularDiseasePrediction-ModelPerformance?:language=es-ES&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
-*Visualization dashboards will be added in a future update.*
+---
+
+### Model Explainability
+Feature importance visualization highlighting the variables that most influence cardiovascular disease prediction.
+
+![Feature Importance](images/model_explainability_dashboard.png)
+
+[View Interactive Dashboard on Tableau Public](https://public.tableau.com/views/feature_importance_analysis/FeatureImportanceAnalysis?:language=es-ES&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
+---
+
+### Prediction Analysis
+Analysis of model prediction behavior using confusion matrices, probability distributions, and probability vs. actual outcome comparisons.
+
+![Prediction Analysis](images/prediction_analysis_dashboard.png)
+
+[View Interactive Dashboard on Tableau Public](https://public.tableau.com/views/prediction_behavior_analysis/PredictionBehaviorAnalysis?:language=es-ES&:sid=&:redirect=auth&publish=yes&showOnboarding=true&:display_count=n&:origin=viz_share_link)
 
 ---
 
@@ -219,6 +262,8 @@ The project was implemented in Python using the following libraries:
 * seaborn
 
 The dataset was obtained from Kaggle.
+
+Tableau was used as an additional external visualizations tool.
 
 ---
 
