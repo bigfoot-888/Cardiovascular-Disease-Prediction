@@ -118,24 +118,31 @@ cardiovascular-disease-ml/
 The notebook follows a structured machine learning workflow:
 
 1. **Data Loading**
+
 Importing the dataset and preparing it for analysis.
 
 2. **Data Exploration**
+
 Examining feature distributions, correlations, and potential issues in the dataset.
 
 3. **Data Cleaning and Wrangling**
+
 Preparing the dataset for machine learning, including handling column formats and feature transformations.
 
 4. **Baseline Models**
+
 Training initial models to establish baseline performance.
 
 5. **Feature Engineering**
+
 Creating additional features such as BMI and pulse pressure to test whether they improve model performance.
 
 6. **Retraining**
+
 Retraining models using the final feature set.
 
 7. **Model Comparison**
+
 Evaluating model performance using several metrics:
    * Accuracy
    * Precision
@@ -144,10 +151,12 @@ Evaluating model performance using several metrics:
    * ROC-AUC
   
 8. **Export for Visualization**
-   Exporting the data to .csv format for external analysis and visualization.
+
+Exporting the data to .csv format for external analysis and visualization.
 
 9. **Conclusion**
-   Interpreting results and identifying the best-performing model.
+
+Interpreting results and identifying the best-performing model.
 
 ---
 
