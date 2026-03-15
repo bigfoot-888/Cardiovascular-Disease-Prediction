@@ -99,52 +99,23 @@ Cardiovascular-Disease-Prediction/
 │
 ├── README.md
 └── LICENSE
-
-cardiovascular-disease-ml/
-│
-├── images/
-│   ├── model_performance_dashboard.png
-│   ├── model_explainability_dashboard.png
-│   └── prediction_analysis_dashboard.png
-│
-├── notebooks/
-│   └── cardiovascular_ml.ipynb
-│
-├── data/
-│   ├── model_comparison_metrics.csv
-│   ├── feature_importance.csv
-│   └── model_predictions.csv
-│
-└── README.md
 ```
 
 ---
 
 ## Notebook Structure
 
-1. **Data Loading**
+1. **Data Loading**: Importing the dataset and preparing it for analysis.
 
-Importing the dataset and preparing it for analysis.
+2. **Data Exploration**: Examining feature distributions, correlations, and potential issues in the dataset.
 
-2. **Data Exploration**
+3. **Data Cleaning and Wrangling**: Preparing the dataset for machine learning, including handling column formats and feature transformations.
 
-Examining feature distributions, correlations, and potential issues in the dataset.
+4. **Baseline Models**: Training initial models to establish baseline performance.
 
-3. **Data Cleaning and Wrangling**
+5. **Feature Engineering**: Creating additional features such as BMI and pulse pressure to test whether they improve model performance.
 
-Preparing the dataset for machine learning, including handling column formats and feature transformations.
-
-4. **Baseline Models**
-
-Training initial models to establish baseline performance.
-
-5. **Feature Engineering**
-
-Creating additional features such as BMI and pulse pressure to test whether they improve model performance.
-
-6. **Retraining**
-
-Retraining models using the final feature set.
+6. **Retraining**: Retraining models using the final feature set.
 
 7. **Model Comparison**
 
@@ -155,13 +126,9 @@ Evaluating model performance using several metrics:
    * F1 Score
    * ROC-AUC
   
-8. **Export for Visualization**
+8. **Export for Visualization**: Exporting the data to .csv format for external analysis and visualization.
 
-Exporting the data to .csv format for external analysis and visualization.
-
-9. **Conclusion**
-
-Interpreting results and identifying the best performing model.
+9. **Conclusion**: Interpreting results and identifying the best performing model.
 
 ## Model Evaluation
 
