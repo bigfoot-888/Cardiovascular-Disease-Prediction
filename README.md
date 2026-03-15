@@ -4,32 +4,43 @@
 
 This project explores the use of machine learning models to predict the likelihood of cardiovascular disease based on patient health data. Logistic Regression, Random Forest, and Gradient Boosting models were trained and evaluated using multiple performance metrics, including Accuracy, Precision, Recall, F1 Score, and ROC-AUC. These three models were chosen because they fit the type of data (binary) and to compare a linear baseline against more complex ensemble methods. 
 
-To better understand and communicate the results beyond Python charts, the model outputs were visualized through interactive dashboards built in Tableau. These dashboards provide insights into model performance, feature importance, and prediction behavior, allowing users to compare models and explore how predictions are distributed across different probability ranges.
+To better understand and communicate the results beyond Python charts, the model outputs were visualized through interactive dashboards built in Tableau. These dashboards provide insights into model performance, feature importance, and prediction behavior, allowing users to better compare each model and explore the results. 
 
 As a whole, this repository covers an end-to-end machine learning workflow, including data preprocessing, model training, feature engineering, performance evaluation, and interactive data visualization. 
 
-## Overview
+---
 
-The goal of this analysis is to identify patterns in patient data that signal cardiovascular risk. The workflow includes:
+## Technologies Used
+
+The project was implemented in Python using the following libraries:
+
+* pandas
+* numpy
+* scikit-learn
+* matplotlib
+
+**Tableau** was used as an additional external visualizations tool.
+
+---
+
+## Overview and Project Goal
+
+The overall workflow includes:
 
 * Data exploration and preprocessing
 * Baseline model training
 * Feature engineering
 * Model retraining with engineered features
 * Model comparison using multiple evaluation metrics
-* Feature importance analysis
+* Results visualization
 
-Three machine learning models were evaluated:
+As mentioned, three machine learning models were evaluated:
 
-* Logistic Regression
-* Random Forest
-* Gradient Boosting
+* **Logistic Regression**: A linear classification model used as a baseline. Logistic Regression is simple, interpretable, and often performs well on structured datasets.
+* **Random Forest**: An ensemble model that combines multiple decision trees to improve predictive performance and reduce overfitting.
+* **Gradient Boosting**: A boosting-based ensemble method that sequentially builds trees to correct errors made by previous trees. This model achieved the strongest overall performance in this project.
 
----
-
-## Project Goal
-
-The objective of this project is to evaluate how different machine learning models perform in predicting cardiovascular disease risk and to identify which health indicators are most influential in the prediction.
+The goal is to identify patterns in patient data that signal cardiovascular risk, evaluate how each model performs in this task, and provide visualizations for the results
 
 ---
 
@@ -37,13 +48,9 @@ The objective of this project is to evaluate how different machine learning mode
 
 The dataset used for the project, **Cardiovascular Disease Dataset**, is available on Kaggle.
 
-Due to licensing restrictions, the dataset is **not included in this repository**. Instead, it must be downloaded directly from Kaggle.
+Due to licensing restrictions, the dataset is not included in the repository. Instead, it must be downloaded directly from Kaggle.
 
-Dataset source:
-
-https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset
-
-### Downloading the dataset
+Dataset source: https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset
 
 You can download the dataset using the Kaggle CLI:
 
@@ -60,12 +67,11 @@ You can download the dataset using the Kaggle CLI:
 # Unzip dataset
 !unzip cardiovascular-disease-dataset.zip
 ```
-
-To use this command, you must configure your Kaggle API credentials by setting them as mentioned.
-
 ---
 
 ## Project Structure
+
+The repository includes the notebook with the code, the packaged tableau workbook, the exported .csv data files, and images of each of the three dashboards created. It also includes a requirements.txt file. 
 
 ```
 Cardiovascular-Disease-Prediction/
@@ -116,8 +122,6 @@ cardiovascular-disease-ml/
 
 ## Notebook Structure
 
-The notebook follows a structured machine learning workflow:
-
 1. **Data Loading**
 
 Importing the dataset and preparing it for analysis.
@@ -157,29 +161,11 @@ Exporting the data to .csv format for external analysis and visualization.
 
 9. **Conclusion**
 
-Interpreting results and identifying the best-performing model.
-
----
-
-## Models Used
-
-### Logistic Regression
-
-A linear classification model used as a baseline. Logistic Regression is simple, interpretable, and often performs well on structured datasets.
-
-### Random Forest
-
-An ensemble model that combines multiple decision trees to improve predictive performance and reduce overfitting.
-
-### Gradient Boosting
-
-A boosting-based ensemble method that sequentially builds trees to correct errors made by previous trees. This model achieved the strongest overall performance in this project.
-
----
+Interpreting results and identifying the best performing model.
 
 ## Model Evaluation
 
-Models were evaluated using multiple classification metrics:
+The models were evaluated using multiple classification metrics:
 
 * **Accuracy** — overall proportion of correct predictions
 * **Precision** — proportion of predicted positives that are correct
@@ -187,15 +173,12 @@ Models were evaluated using multiple classification metrics:
 * **F1 Score** — balance between precision and recall
 * **ROC-AUC** — overall ability to distinguish between classes
 
-The results of this comparison are exported as:
+The results of the models in each metric are exported as:
 
 ```
 model_comparison_metrics.csv
 ```
-
-These metrics allow direct comparison of the models' predictive performance.
-
-Across all evaluation metrics, Gradient Boosting achieved the strongest overall performance. In particular, it obtained the highest recall, which is an important metric in medical prediction tasks because it reflects the model's ability to correctly identify positive cases. This in turn results in fewer false negatives.
+Gradient Boosting achieved the strongest overall performance. In particular, it obtained the highest recall, which is an important metric in medical prediction tasks because it reflects the model's ability to correctly identify positive cases. This in turn results in fewer false negatives, which has a higher priority than reducing false positives. 
 
 ---
 
@@ -206,9 +189,7 @@ Feature importance analysis was performed for the tree-based models:
 * Random Forest
 * Gradient Boosting
 
-This analysis identifies which variables contribute most to the prediction of cardiovascular disease.
-
-The exported files are:
+The exported files with the results are:
 
 ```
 rf_feature_importance.csv
@@ -233,14 +214,15 @@ This file includes:
 * Model predictions
 * Predicted probabilities
 
-These outputs can be used for further analysis or visualization.
+All of these outputs can be used for further analysis or visualization, which was done here using Tableau. 
 
 ---
 
 ## Tableau Dashboards
 
 ### Model Performance
-Comparison of Logistic Regression, Random Forest, and Gradient Boosting across key evaluation metrics including Accuracy, Precision, Recall, F1 Score, and ROC-AUC.
+
+Comparison of Logistic Regression, Random Forest, and Gradient Boosting across the aforementioned evaluation metrics: Accuracy, Precision, Recall, F1 Score, and ROC-AUC.
 
 ![Model Performance](images/model_performance_dashboard.png)
 
@@ -249,7 +231,8 @@ Comparison of Logistic Regression, Random Forest, and Gradient Boosting across k
 ---
 
 ### Model Explainability
-Feature importance visualization highlighting the variables that most influence cardiovascular disease prediction.
+
+Feature importance visualization highlighting the variables that influence cardiovascular disease prediction the most.
 
 ![Feature Importance](images/model_explainability_dashboard.png)
 
@@ -258,6 +241,7 @@ Feature importance visualization highlighting the variables that most influence 
 ---
 
 ### Prediction Analysis
+
 Analysis of model prediction behavior using confusion matrices, probability distributions, and probability vs. actual outcome comparisons.
 
 ![Prediction Analysis](images/prediction_analysis_dashboard.png)
@@ -288,27 +272,11 @@ Higher predicted probabilities are generally associated with true positive cases
 
 ---
 
-## Technologies Used
-
-The project was implemented in Python using the following libraries:
-
-* pandas
-* numpy
-* scikit-learn
-* matplotlib
-* seaborn
-
-The dataset was obtained from Kaggle.
-
-Tableau was used as an additional external visualizations tool.
-
----
-
 ## License
 
 This repository is licensed under the **MIT License**.
 
-Note that the dataset used in this project is provided by Kaggle and is **not redistributed in this repository**. Users must download the dataset directly from Kaggle according to its licensing terms.
+Note that the dataset used in this project is provided by Kaggle and is not redistributed in this repository. To use the same dataset, you have to download it yourself directly from Kaggle. 
 
 ---
 
