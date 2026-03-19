@@ -1,6 +1,6 @@
 # Cardiovascular Disease Prediction using Machine Learning
 
-## Project Summary
+## Overview
 
 This project explores the use of machine learning models to predict the likelihood of cardiovascular disease based on patient health data. Logistic Regression, Random Forest, and Gradient Boosting models were trained and evaluated using multiple performance metrics, including Accuracy, Precision, Recall, F1 Score, and ROC-AUC. These three models were chosen because they fit the type of data (binary) and to compare a linear baseline against more complex ensemble methods. 
 
@@ -8,65 +8,75 @@ To better understand and communicate the results beyond Python charts, the model
 
 As a whole, this repository covers an end-to-end machine learning workflow, including data preprocessing, model training, feature engineering, performance evaluation, and interactive data visualization. 
 
+This project explores the use of machine learning to predict cardiovascular disease risk based on patient health data. Three classification models were trained and evaluated, including Logistic Regression, Random Forest, and Gradient Boosting. These were chosen to compare a linear baseline (Logistic Regression) against more complex ensemble methods on a binary classification task like this one. 
+
+**Gradient boosting** achieved the strongest overall performance, with ~0.73 accuracy and ~0.80 ROC-AUC. In particular, it obtained the highest recall, which is a big priority in medical prediction tasks as it minimizes false negatives. The risk that comes with false negatives is almost always higher than having to deal with false positives. 
+
+The full workflow includes: 
+* Data exploration and preprocessing
+* Baseline model training
+* Feature engineering (BMI, pulse pressure)
+* Model retraining with engineered features
+* Model comparison and comparison with Accuray, Precision, Recall, F1 Score, ROC-AUC, and Confusion Matrix
+* Interactive results visualization via Tableau
+
+The end goal is to identify patterns in patient data that signal cardiovascular risk, evaluate how each model performs in this task, and provide good visualizations for the results.
+
 ---
 
 ## Technologies Used
 
 The project was implemented in Python using the following libraries:
 
-* pandas
-* numpy
-* scikit-learn
-* matplotlib
+* Python
+* Jupyter Notebook
+* pandas, numpy — data manipulation
+* scikit-learn — model training and evaluation
+* matplotlib — plotting
+* Tableau — interactive dashboard visualization
 
-**Tableau** was used as an additional external visualizations tool.
-
----
-
-## Overview and Project Goal
-
-The overall workflow includes:
-
-* Data exploration and preprocessing
-* Baseline model training
-* Feature engineering
-* Model retraining with engineered features
-* Model comparison using multiple evaluation metrics
-* Results visualization
-
-As mentioned, three machine learning models were evaluated:
-
-* **Logistic Regression**: A linear classification model used as a baseline. Logistic Regression is simple, interpretable, and often performs well on structured datasets.
-* **Random Forest**: An ensemble model that combines multiple decision trees to improve predictive performance and reduce overfitting.
-* **Gradient Boosting**: A boosting-based ensemble method that sequentially builds trees to correct errors made by previous trees. This model achieved the strongest overall performance in this project.
-
-The goal is to identify patterns in patient data that signal cardiovascular risk, evaluate how each model performs in this task, and provide visualizations for the results
+Python dependencies are listen in `requirements.txt`. 
 
 ---
 
-## Dataset
+## Getting Started
 
-The dataset used for the project, **Cardiovascular Disease Dataset**, is available on Kaggle.
+### 1. Clone the repository
 
-Due to licensing restrictions, the dataset is not included in the repository. Instead, it must be downloaded directly from Kaggle.
+git clone https://github.com/bigfoot-888/Cardiovascular-Disease-Prediction.git
+cd Cardiovascular-Disease-Prediction
 
-Dataset source: https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset
+### 2. Install dependencies
 
-You can download the dataset using the Kaggle CLI:
+pip install -r requirements.txt
 
-```bash
+### 3. Download the dataset
+
+The dataset is not included in the repository due to licensing restrictions. Download it from Kaggle using one of the methods below.
+
+**Option A — Kaggle CLI (terminal):**
+
+export KAGGLE_USERNAME="your_username"
+export KAGGLE_KEY="your_api_key"
+kaggle datasets download sulianova/cardiovascular-disease-dataset
+unzip cardiovascular-disease-dataset.zip -d data/
+
+**Option B — Inside a Jupyter notebook:**
+
 !pip install kaggle
-
-# Set your Kaggle API credentials (replace with your own)
-!export KAGGLE_USERNAME="your_username"
-!export KAGGLE_KEY="your_key"
-
-# Download dataset
+import os
+os.environ["KAGGLE_USERNAME"] = "your_username"
+os.environ["KAGGLE_KEY"] = "your_api_key"
 !kaggle datasets download sulianova/cardiovascular-disease-dataset
+!unzip cardiovascular-disease-dataset.zip -d data/
 
-# Unzip dataset
-!unzip cardiovascular-disease-dataset.zip
-```
+Alternatively, download the dataset manually from:
+https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset
+
+### 4. Run the notebook
+
+Open and run notebooks/Cardiovascular_Disease_Prediction.ipynb in Jupyter.
+
 ---
 
 ## Project Structure
