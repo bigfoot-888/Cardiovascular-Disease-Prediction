@@ -2,12 +2,6 @@
 
 ## Overview
 
-This project explores the use of machine learning models to predict the likelihood of cardiovascular disease based on patient health data. Logistic Regression, Random Forest, and Gradient Boosting models were trained and evaluated using multiple performance metrics, including Accuracy, Precision, Recall, F1 Score, and ROC-AUC. These three models were chosen because they fit the type of data (binary) and to compare a linear baseline against more complex ensemble methods. 
-
-To better understand and communicate the results beyond Python charts, the model outputs were visualized through interactive dashboards built in Tableau. These dashboards provide insights into model performance, feature importance, and prediction behavior, allowing users to better compare each model and explore the results. 
-
-As a whole, this repository covers an end-to-end machine learning workflow, including data preprocessing, model training, feature engineering, performance evaluation, and interactive data visualization. 
-
 This project explores the use of machine learning to predict cardiovascular disease risk based on patient health data. Three classification models were trained and evaluated, including Logistic Regression, Random Forest, and Gradient Boosting. These were chosen to compare a linear baseline (Logistic Regression) against more complex ensemble methods on a binary classification task like this one. 
 
 **Gradient boosting** achieved the strongest overall performance, with ~0.73 accuracy and ~0.80 ROC-AUC. In particular, it obtained the highest recall, which is a big priority in medical prediction tasks as it minimizes false negatives. The risk that comes with false negatives is almost always higher than having to deal with false positives. 
@@ -20,7 +14,7 @@ The full workflow includes:
 * Model comparison and comparison with Accuray, Precision, Recall, F1 Score, ROC-AUC, and Confusion Matrix
 * Interactive results visualization via Tableau
 
-The end goal is to identify patterns in patient data that signal cardiovascular risk, evaluate how each model performs in this task, and provide good visualizations for the results.
+The end goal is to identify patterns in patient data that signal cardiovascular risk, evaluate how each model performs in this task, and provide good visualizations for the results through Tableau. 
 
 ---
 
