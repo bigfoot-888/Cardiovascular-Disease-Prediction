@@ -224,13 +224,13 @@ Analysis of model prediction behavior using confusion matrices, probability dist
 ## Key Insights
 
 - **Tree-based models slightly outperform Logistic Regression.**  
-Random Forest and Gradient Boosting without additionally engineered features achieved the highest performance across most evaluation metrics, suggesting that nonlinear relationships between features and cardiovascular disease risk are present in the dataset.
+Random Forest and Gradient Boosting without additionally engineered features achieved the highest performance across most evaluation metrics.
 
 - **All models show similar performance levels.**  
-While tree-based models show a slight edge, all models perform within a narrow range (~0.73 accuracy), suggesting a robust baseline for the dataset.
+While tree-based models show a slight edge, all models perform within a narrow range (~0.73 accuracy), which suggests a robust baseline for the dataset.
 
 - **ROC-AUC scores around 0.80 indicate good class separation.**  
-This suggests the models can reasonably distinguish between patients with and without cardiovascular disease. A ROC-AUC of ~0.80 is generally considered good.
+ROC-AUC of ~0.80 is generally considered good. This means can reasonably distinguish between patients with and without cardiovascular disease. A
 
 - **Precision and Recall trade-offs highlight prediction balance.**  
 The models maintain relatively balanced precision and recall values, meaning they perform consistently in identifying true positive cases while limiting false positives, reflected in a stable F1-score across all models.
