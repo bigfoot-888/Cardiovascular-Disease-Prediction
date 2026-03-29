@@ -22,8 +22,6 @@ The end goal is to identify patterns in patient data that signal cardiovascular 
 
 The project was implemented in Python using the following libraries:
 
-* Python
-* Jupyter Notebook
 * pandas, numpy — data manipulation
 * scikit-learn — model training and evaluation
 * matplotlib — plotting
