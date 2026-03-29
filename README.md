@@ -221,22 +221,22 @@ Analysis of model prediction behavior using confusion matrices, probability dist
 
 ## Key Insights
 
-- **Tree-based models slightly outperform Logistic Regression.**  
+- **Tree-based models slightly outperform Logistic Regression**  
 Random Forest and Gradient Boosting without additionally engineered features achieved the highest performance across most evaluation metrics.
 
-- **All models show similar performance levels.**  
+- **All models show similar performance levels**  
 While tree-based models show a slight edge, all models perform within a narrow range (~0.73 accuracy), which suggests a robust baseline for the dataset.
 
-- **ROC-AUC scores around 0.80 indicate good class separation.**  
+- **ROC-AUC scores around 0.80 indicate good class separation**  
 ROC-AUC of ~0.80 is generally considered good. This means can reasonably distinguish between patients with and without cardiovascular disease. A
 
-- **Precision and Recall trade-offs highlight prediction balance.**  
+- **Precision and Recall trade-offs highlight prediction balance**  
 The models maintain relatively balanced precision and recall values, meaning they perform consistently in identifying true positive cases while limiting false positives, reflected in a stable F1-score across all models.
 
-- **Feature importance analysis highlights the most influential health indicators.**  
+- **Feature importance analysis highlights the most influential health indicators**  
 Variables such as blood pressure, age, and other health-related features contribute significantly to cardiovascular disease prediction in the trained models. In particular, systolic blood pressure was by far the most influential variable in both Random Forest and Gradient Boosting.
 
-- **Prediction probability distributions show clear separation between classes.**  
+- **Prediction probability distributions show clear separation between classes**  
 Higher predicted probabilities are generally associated with true positive cases, indicating that the models are able to capture meaningful patterns in the data.
 
 ---
