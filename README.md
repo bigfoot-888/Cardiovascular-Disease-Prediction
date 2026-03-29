@@ -27,7 +27,7 @@ The project was implemented in Python using the following libraries:
 * matplotlib — plotting
 * Tableau — interactive dashboard visualization
 
-Python dependencies are listen in `requirements.txt`. 
+Python dependencies are listed in `requirements.txt`. 
 
 ---
 
